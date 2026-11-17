@@ -4,6 +4,7 @@ document.documentElement.classList.remove('no-js');
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
 import './cursor.js';
+import './scrollbar.js';
 import './scroll.js';
 import './typewriter.js';
 import './nav.js';

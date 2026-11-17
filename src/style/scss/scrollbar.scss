@@ -1,0 +1,23 @@
+/* Custom Portfolio Scrollbar */
+.os-theme-portfolio {
+  --os-size: 7px;
+  --os-handle-bg: #fa8112;
+  --os-handle-bg-hover: #ff9b35;
+  --os-handle-bg-active: #e87500;
+  --os-handle-border-radius: 20px;
+}
+
+.os-scrollbar-vertical {
+  width: 7px !important;
+}
+
+.os-scrollbar-vertical .os-scrollbar-handle {
+  background: var(--g-warm) !important;
+  border-radius: 20px !important;
+  min-height: 40px;
+  transition: background-color 0.4s ease;
+}
+
+// git add .
+// git commit -m "Add custom animated scrollbar"
+// git push origin main

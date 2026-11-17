@@ -12,12 +12,24 @@ function pugPlugin() {
       order: 'pre',
       handler(html) {
         return html.replace(/<pug\s+src=["'](.+?)["']\s*><\/pug>/, (_, src) => {
-          return pug.renderFile(path.resolve(root, src), {
+          const file = path.resolve(root, src);
+
+          return pug.renderFile(file, {
             basedir: root,
             pretty: true,
           });
         });
       },
+    },
+
+    handleHotUpdate({ file, server }) {
+      if (file.endsWith('.pug')) {
+        server.ws.send({
+          type: 'full-reload',
+        });
+
+        return [];
+      }
     },
   };
 }
