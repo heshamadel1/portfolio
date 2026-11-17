@@ -1,0 +1,137 @@
+/* ═══════════════════════════════════════
+   GITHUB
+═══════════════════════════════════════ */
+.gh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.gh-repo {
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  display: block;
+  transition:
+    border-color 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+  &:hover {
+    border-color: var(--border2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  }
+}
+.gh-rh {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+.gh-rn {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: var(--c-ind-l);
+}
+.gh-rb {
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+  font-family: var(--fm);
+  font-size: 0.58rem;
+  background: var(--c-s2);
+  border: 1px solid var(--border);
+  color: var(--c-t3);
+  flex-shrink: 0;
+}
+.gh-rd {
+  font-size: 0.82rem;
+  color: var(--c-t2);
+  font-weight: 300;
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+  min-height: 2.5rem;
+}
+.gh-rm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--c-t3);
+  span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+.gh-ld {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.gh-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.5rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border2);
+  background: rgba(99, 102, 241, 0.06);
+  transition: all 0.25s;
+  &:hover {
+    border-color: var(--border3);
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateX(4px);
+    .gh-arr {
+      transform: translateX(4px);
+    }
+  }
+}
+.gh-cta-text {
+  flex: 1;
+}
+.gh-ctit {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+.gh-csub {
+  font-size: 0.8rem;
+  color: var(--c-t2);
+  font-weight: 300;
+}
+.gh-arr {
+  color: var(--c-ind-l);
+  transition: transform 0.25s;
+  margin-left: auto;
+}
+#gh-load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  color: var(--c-t2);
+  font-size: 0.85rem;
+  font-family: var(--fm);
+}
+.gh-spin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--c-ind-l);
+  animation: ghSpin 0.8s linear infinite;
+}
+
+@keyframes ghSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

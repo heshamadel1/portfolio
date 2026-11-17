@@ -1,0 +1,8 @@
+/* ── BENTO GLOW ── */
+document.querySelectorAll('.bc').forEach((el) => {
+  el.addEventListener('mousemove', (e) => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+    el.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+  });
+});

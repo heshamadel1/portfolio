@@ -1,0 +1,80 @@
+.sk-icon {
+  i.devicon-react-original,
+  i.devicon-javascript-plain,
+  i.devicon-html5-plain,
+  i.devicon-css3-plain,
+  i.devicon-git-plain,
+  i.devicon-github-original,
+  i.devicon-vscode-plain,
+  i.devicon-python-plain,
+  i.devicon-java-plain,
+  i.devicon-cplusplus-plain {
+    font-size: 2.1rem;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.n-cta i,
+.btn-primary i,
+.btn-secondary i,
+.btn-dl i,
+.soc-ico i,
+.ct-ico i,
+.tl-card i,
+.fsoc i,
+.gh-cta i,
+.pc-ico i,
+.h-ey i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ct-ico {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.soc-ico {
+  i {
+    font-size: 0.85rem;
+  }
+
+  .fa-whatsapp {
+    font-size: 0.95rem;
+  }
+}
+
+.fsoc {
+  i {
+    font-size: 0.8rem;
+  }
+}
+
+.pci {
+  i {
+    font-size: 0.82rem;
+  }
+}
+
+.n-ham {
+  span {
+    border-radius: 2px;
+  }
+}
+
+.img-badge {
+  i {
+    font-size: 0.7rem;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+.sk-card:focus-visible,
+.ct-card:focus-visible {
+  outline: 2px solid var(--c-ind-l);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}

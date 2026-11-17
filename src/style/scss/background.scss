@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════
+   BACKGROUNDS
+═══════════════════════════════════════ */
+$background-color-1: rgba(250, 129, 18, 0.1);
+$background-color-2: rgba(251, 146, 60, 0.08);
+$background-color-3: rgba(253, 186, 116, 0.06);
+$background-image-color-1: rgba(250, 129, 18, 0.016);
+
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 900px 700px at 5% 10%, $background-color-1, transparent 60%),
+    radial-gradient(ellipse 800px 600px at 95% 90%, $background-color-2, transparent 55%),
+    radial-gradient(ellipse 700px 500px at 50% 0%, $background-color-3, transparent 50%);
+  animation: meshDrift 24s ease-in-out infinite alternate;
+}
+
+@keyframes meshDrift {
+  to {
+    transform: translate(20px, 14px) scale(1.04);
+  }
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient($background-image-color-1 1px, transparent 1px),
+    linear-gradient(90deg, $background-image-color-1 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, black 10%, transparent 80%);
+}
+
+#bgcvs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}

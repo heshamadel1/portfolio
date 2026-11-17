@@ -1,0 +1,97 @@
+//HERO
+section#hero.hero(aria-label='Introduction')
+  .hero-inner
+    div
+      .h-ey(aria-hidden='true')
+        span.h-badge Backend Developer
+        span.h-sep /
+        span.h-loc
+          i.fa-solid.fa-location-dot.fa-xs(style='color: var(--c-cyan)', aria-hidden='true')
+          | Alexandria, Egypt
+      h1.h-title #[span.ht1 Hesham] #[span.ht2 Adel.]
+      .h-tw(aria-live='polite', aria-label='Current role')
+        span.tw-pre ~/
+        span#tw-text.tw-txt
+        span.tw-cur(aria-hidden='true')
+      .h-roles(aria-label='Skills')
+        .hrt.rt-b #[span.d(aria-hidden='true')]PHP
+        .hrt.rt-c #[span.d(aria-hidden='true')]Laravel
+        .hrt.rt-g #[span.d(aria-hidden='true')]Open to Work
+      p.h-desc
+        | I build
+        |
+        strong scalable, secure, and high-performance
+        |
+        | backend applications using PHP and Laravel. I specialize in designing RESTful APIs, database architecture, and building reliable web solutions. I also work with React.js and Next.js to create modern, responsive user interfaces.
+      .h-find
+        span.h-find-lbl Find me
+        .soc-row(role='list', aria-label='Social links')
+          a.soc-ico.soc-em(
+            href='mailto:heshamadel528@gmail.com',
+            aria-label='Email Hesham',
+            role='listitem',
+            title='Email'
+          )
+            i.fa-solid.fa-envelope.fa-xs(aria-hidden='true')
+          a.soc-ico.soc-wa(
+            href='https://wa.me/01275372663',
+            target='_blank',
+            rel='noopener noreferrer',
+            aria-label='WhatsApp',
+            role='listitem',
+            title='WhatsApp'
+          )
+            i.fa-brands.fa-whatsapp.fa-sm(aria-hidden='true')
+          a.soc-ico.soc-li(
+            href='https://linkedin.com/in/heshamadel1',
+            target='_blank',
+            rel='noopener noreferrer',
+            aria-label='LinkedIn Profile',
+            role='listitem',
+            title='LinkedIn'
+          )
+            i.fa-brands.fa-linkedin-in.fa-xs(aria-hidden='true')
+          a.soc-ico.soc-gh(
+            href='https://github.com/heshamadel1',
+            target='_blank',
+            rel='noopener noreferrer',
+            aria-label='GitHub Profile',
+            role='listitem',
+            title='GitHub'
+          )
+            i.fa-brands.fa-github.fa-xs(aria-hidden='true')
+      .h-btns
+        a.btn-primary(href='#projects') #[i.fa-solid.fa-eye.fa-sm(aria-hidden='true')]View Projects
+        a.btn-secondary(href='#contact') #[i.fa-solid.fa-envelope.fa-sm(aria-hidden='true')]Contact Me
+        a#cv-btn.btn-dl(
+          href='#',
+          download='hesham_adel_CV.pdf',
+          aria-label='Download Hesham\'s CV as PDF'
+        )
+          | Download CV
+      .h-stats(aria-label='Experience stats')
+        div
+          .stat-n.sn-b(data-count='1') 0
+          .stat-l Years Learning
+        div
+          .stat-n.sn-i(data-count='3') 0
+          .stat-l Projects Built
+        div
+          .stat-n.sn-c(data-count='2') 0
+          .stat-l Internships
+    // PROFILE IMAGE
+    .hero-img(aria-hidden='true')
+      .img-glow
+      .img-ring.ring1
+      .img-ring.ring2
+      .img-circle
+        img(
+          src='/img/hesham.webp',
+          alt='Hesham Adel — Backend Developer | PHP & Laravel',
+          width='290',
+          height='290',
+          loading='eager',
+          decoding='async',
+          fetchpriority='high'
+        )
+      .img-badge #[span.badge-dot] Available for work

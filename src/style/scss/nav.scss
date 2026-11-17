@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════ */
+$background-color-1: rgba(2, 8, 23, 0.94);
+$color-1: #fff;
+$background-color-2: rgba(2, 8, 23, 0.98);
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5vw;
+  transition:
+    background 0.5s,
+    border-color 0.5s;
+}
+
+#nav.scrolled {
+  background: $background-color-1;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-bottom: 1px solid var(--border);
+}
+
+.n-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--fh);
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    .n-mark {
+      transform: rotate(10deg) scale(1.1);
+    }
+  }
+}
+
+.n-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--g-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: $color-1;
+  box-shadow: 0 4px 16px var(--glow-ind);
+  transition:
+    transform 0.3s var(--spring),
+    box-shadow 0.3s;
+}
+
+.n-links {
+  display: flex;
+  gap: 2.5rem;
+
+  a {
+    font-size: 0.73rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-t2);
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 3px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--g-main);
+      transition: width 0.28s var(--ease);
+    }
+  }
+
+  a:hover,
+  a.active {
+    color: var(--c-text);
+  }
+
+  a:hover::after,
+  a.active::after {
+    width: 100%;
+  }
+}
+
+.n-cta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.52rem 1.4rem;
+  border-radius: 100px;
+  background: var(--g-main);
+  color: $color-1;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 18px var(--glow-ind);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px var(--glow-ind);
+  }
+}
+
+.n-ham {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: border-color 0.2s;
+
+  span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--c-t2);
+    transition: all 0.3s;
+  }
+}
+
+.n-ham.open {
+  span {
+    &:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+  }
+}
+
+.n-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: $background-color-2;
+  backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+
+  a {
+    font-family: var(--fh);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--c-t2);
+    transition:
+      color 0.2s,
+      transform 0.2s;
+
+    &:hover {
+      color: var(--c-text);
+      transform: translateX(8px);
+    }
+  }
+}
+
+.n-panel.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.n-panel-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-t2);
+  font-size: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--border2);
+    color: var(--c-text);
+  }
+}

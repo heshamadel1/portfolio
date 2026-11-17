@@ -1,0 +1,25 @@
+section#github(aria-label='GitHub Activity')
+  .sec
+    .rv
+      .ey.ey-g Open Source
+      h2.sec-h GitHub #[em Activity] #[span.grt —]
+    #gh-load(role='status', aria-live='polite')
+      .gh-spin(aria-hidden='true')
+      span Loading repositories...
+    #gh-out(style='display: none')
+      #gh-repos.gh-grid(aria-label='GitHub repositories')
+      a.gh-cta.rv(
+        href='https://github.com/heshamadel1',
+        target='_blank',
+        rel='noopener noreferrer',
+        aria-label='View full GitHub profile'
+      )
+        div(
+          style='width: 40px; height: 40px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0',
+          aria-hidden='true'
+        )
+          i.fa-brands.fa-github(style='color: var(--c-ind-l)')
+        .gh-cta-text
+          .gh-ctit View Full GitHub Profile
+          .gh-csub github.com/heshamadel1
+        i.fa-solid.fa-arrow-right.gh-arr(aria-hidden='true')

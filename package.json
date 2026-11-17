@@ -1,0 +1,51 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Hesham Adel is a Backend Developer based in Alexandria, Egypt. Specializing in PHP, Laravel, and  also use React.js & Next.js, and build modern interface and showcase in project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeshamAdel1"
+  },
+  "keywords": [
+    "Backend",
+    "Developer",
+    "Php",
+    "Developer",
+    "Laravel",
+    "Framework",
+    "Docker",
+    "linux",
+    "Git",
+    "Sql",
+    "Database",
+    "MySql",
+    "PostgreSql",
+    "API",
+    "RestApi",
+    "React",
+    "Next.js",
+    "Alexandria",
+    "Egypt",
+    "Web",
+    "Developer"
+  ],
+  "author": "Hesham Adel",
+  "license": "ISC",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^3.6.0",
+    "browser-sync": "^3.0.4",
+    "prettier": "^3.10.1",
+    "pug": "^3.0.4",
+    "sass": "^1.108.2",
+    "vite": "^8.3.8"
+  }
+}

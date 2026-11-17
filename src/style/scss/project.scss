@@ -1,0 +1,235 @@
+/* ═══════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════ */
+
+.prj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.25rem;
+}
+
+.prj-card {
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    border-color: rgba(250, 129, 18, 0.45);
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 28px 64px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(250, 129, 18, 0.12),
+      0 0 30px rgba(250, 129, 18, 0.06);
+
+    .prj-icon {
+      transform: scale(1.12) rotate(6deg);
+      box-shadow: 0 10px 28px rgba(250, 129, 18, 0.28);
+    }
+  }
+}
+
+.prj-top {
+  height: 168px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 7px,
+      rgba(250, 129, 18, 0.04) 7px,
+      rgba(250, 129, 18, 0.04) 8px
+    );
+  }
+}
+
+/* Project Gradients */
+
+.pt1 {
+  background: linear-gradient(
+    135deg,
+    rgba(250, 129, 18, 0.3),
+    rgba(251, 146, 60, 0.18),
+    rgba(253, 186, 116, 0.1)
+  );
+}
+
+.pt2 {
+  background: linear-gradient(
+    135deg,
+    rgba(234, 88, 12, 0.28),
+    rgba(250, 129, 18, 0.18),
+    rgba(251, 146, 60, 0.1)
+  );
+}
+
+.pt3 {
+  background: linear-gradient(
+    135deg,
+    rgba(253, 186, 116, 0.22),
+    rgba(250, 129, 18, 0.16),
+    rgba(234, 88, 12, 0.1)
+  );
+}
+
+/* Project Number */
+
+.prj-num {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-family: var(--fh);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+  user-select: none;
+}
+
+/* Project Icon */
+
+.prj-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(250, 129, 18, 0.18);
+  border: 1px solid rgba(250, 129, 18, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  transition:
+    transform 0.35s var(--spring),
+    box-shadow 0.3s;
+}
+
+/* Project Chip */
+
+.prj-chip {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-family: var(--fm);
+  font-size: 0.6rem;
+  color: #fdba74;
+  background: rgba(250, 129, 18, 0.1);
+  border: 1px solid rgba(250, 129, 18, 0.25);
+}
+
+/* Project Body */
+
+.prj-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.prj-title {
+  font-family: var(--fh);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.55rem;
+}
+
+.prj-desc {
+  font-size: 0.85rem;
+  color: var(--c-t2);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Project Tags */
+
+.prj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.prj-tag {
+  padding: 0.17rem 0.58rem;
+  border-radius: 6px;
+  background: var(--c-s2);
+  border: 1px solid var(--border);
+  font-family: var(--fm);
+  font-size: 0.62rem;
+  color: var(--c-t3);
+}
+
+/* Project Links */
+
+.prj-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+/* GitHub Button */
+
+.pl-gh {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.77rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--c-s2);
+  color: var(--c-t2);
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: rgba(250, 129, 18, 0.4);
+    color: var(--c-text);
+    background: rgba(250, 129, 18, 0.07);
+  }
+}
+
+/* Live Demo Button */
+
+.pl-lv {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.77rem;
+  font-weight: 600;
+  background: rgba(250, 129, 18, 0.1);
+  border: 1px solid rgba(250, 129, 18, 0.25);
+  color: #fa8112;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba(250, 129, 18, 0.2);
+    border-color: rgba(250, 129, 18, 0.45);
+    color: #fdba74;
+  }
+}

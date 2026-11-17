@@ -1,0 +1,40 @@
+// Skip link for accessibility
+a.skip-link(href='#main-content') Skip to main content
+
+// SCROLL PROGRESS
+#sp-bar(role='progressbar', aria-label='Page scroll progress')
+  #sp-fill
+
+// BACK TO TOP
+button#btt(aria-label='Back to top') #[i.fa-solid.fa-arrow-up.fa-xs(aria-hidden='true')]
+
+// CURSOR
+#cur-dot(aria-hidden='true')
+#cur-ring(aria-hidden='true')
+
+// BACKGROUNS
+.bg-mesh(aria-hidden='true')
+.bg-grid(aria-hidden='true')
+canvas#bgcvs(aria-hidden='true')
+
+<!-- ══════ NAV ══════ -->
+include ./header/header.pug
+include ./header/nav-mobile.pug
+main#main-content
+  include ./pages/hero.pug
+  .sep(role='separator')
+  include ./pages/about.pug
+  .sep(role='separator')
+  include ./pages/skills.pug
+  .sep(role='separator')
+  include ./pages/projects.pug
+  .sep(role='separator')
+  include ./pages/experience.pug
+  .sep(role='separator')
+  include ./pages/github.pug
+  .sep(role='separator')
+  include ./pages/educations.pug
+  .sep(role='separator')
+  include ./pages/contact.pug
+  .sep(role='separator')
+include ./header/footer.pug

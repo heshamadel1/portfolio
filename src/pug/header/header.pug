@@ -1,0 +1,23 @@
+header
+  nav#nav(role='navigation', aria-label='Main navigation')
+    a.n-logo(href='#hero', aria-label='Hesham Adel - Home')
+      .n-mark(aria-hidden='true') H
+      | Hesham.dev
+    .n-links(role='list')
+      a(href='#about', role='listitem') About
+      a(href='#skills', role='listitem') Skills
+      a(href='#projects', role='listitem') Projects
+      a(href='#experience', role='listitem') Experience
+      a(href='#github', role='listitem') GitHub
+      a(href='#contact', role='listitem') Contact
+    a.n-cta(href='#contact', aria-label='Let\'s Work Together')
+      i.fa-solid.fa-paper-plane.fa-xs(aria-hidden='true')
+      | Hire Me
+    button#ham.n-ham(
+      aria-label='Open navigation menu',
+      aria-expanded='false',
+      aria-controls='npanel'
+    )
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')

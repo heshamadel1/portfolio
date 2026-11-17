@@ -1,0 +1,23 @@
+/* ═══════════════════════════════════════
+   SCROLL PROGRESS
+═══════════════════════════════════════ */
+$background-color-1: rgba(99, 102, 241, 0.08);
+$box-shadow-color-1: rgba(99, 102, 241, 0.5);
+
+#sp-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  z-index: 9000;
+  background: $background-color-1;
+}
+
+#sp-fill {
+  height: 100%;
+  width: 0;
+  background: var(--g-main);
+  box-shadow: 0 0 10px $box-shadow-color-1;
+  transition: width 0.08s linear;
+}

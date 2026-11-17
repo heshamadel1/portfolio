@@ -1,0 +1,189 @@
+/* ═══════════════════════════════════════
+   SKILLS
+═══════════════════════════════════════ */
+.sk-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.sg-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+}
+.sg-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+.sgi-b {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+}
+.sgi-v {
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+.sgi-c {
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.18);
+}
+.sg-name {
+  font-family: var(--fh);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+.sk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+}
+/* shimmer sweep on hover */
+.sk-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.35rem 0.85rem 1.25rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(250, 129, 18, 0.08), rgba(7, 17, 35, 0.9));
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.28s,
+    transform 0.28s var(--spring),
+    box-shadow 0.28s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(250, 129, 18, 0.08),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: rgba(250, 129, 18, 0.45);
+    transform: translateY(-6px) scale(1.03);
+
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(250, 129, 18, 0.15),
+      0 0 30px rgba(250, 129, 18, 0.12);
+
+    &::after {
+      opacity: 1;
+    }
+
+    .sk-icon-wrap {
+      transform: scale(1.15) rotate(-6deg) translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .sk-icon {
+      transform: scale(1.15) rotate(-6deg);
+    }
+
+    .sk-label {
+      color: var(--c-orange, #fa8112);
+    }
+  }
+}
+/* Icon wrapper — colored background ring */
+.sk-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--ico-bg, rgba(99, 102, 241, 0.1));
+  border: 1px solid var(--ico-border, rgba(99, 102, 241, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  transition:
+    transform 0.4s var(--spring),
+    box-shadow 0.3s,
+    background 0.3s;
+  position: relative;
+  z-index: 1;
+  i {
+    font-size: 1.75rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* legacy .sk-icon support */
+.sk-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  line-height: 1;
+  transition: transform 0.4s var(--spring);
+  position: relative;
+  z-index: 1;
+}
+.sk-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--c-t2);
+  letter-spacing: 0.02em;
+  transition: color 0.25s;
+  position: relative;
+  z-index: 1;
+  line-height: 1.2;
+}
+/* Tooltip */
+.sk-card[data-tip] {
+  position: relative;
+  &::before {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    padding: 0.35rem 0.8rem;
+    border-radius: 8px;
+    background: rgba(7, 14, 38, 0.97);
+    border: 1px solid var(--border2);
+    font-family: var(--fm);
+    font-size: 0.62rem;
+    color: var(--c-text);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
+    z-index: 20;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}

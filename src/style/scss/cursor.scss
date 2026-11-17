@@ -1,0 +1,78 @@
+/* ═══════════════════════════════════════
+   CURSOR
+═══════════════════════════════════════ */
+$background-color-1: #ffffff;
+$background-color-2: rgba(#fa8112, 0.12);
+// Border Colors
+$border-color-1: rgba(#fa8112, 0.4);
+$border-color-2: rgba(#fa8112, 0.85);
+
+#cur-dot,
+#cur-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+
+#cur-dot {
+  width: 8px;
+  height: 8px;
+  background: $background-color-1;
+  mix-blend-mode: difference;
+  transition: transform 0.12s;
+}
+
+#cur-ring {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid $border-color-1;
+  transition:
+    width 0.28s var(--ease),
+    height 0.28s var(--ease),
+    border-color 0.28s;
+}
+
+body.csr-hover {
+  #cur-ring {
+    width: 56px;
+    height: 56px;
+    border-color: $border-color-2;
+  }
+
+  #cur-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+.csr-trail {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9990;
+  transform: translate(-50%, -50%);
+  background: $background-color-2;
+  animation: trailFade 0.6s var(--ease) forwards;
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 0.6;
+    width: 6px;
+    height: 6px;
+  }
+  100% {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+}
+
+@media (pointer: coarse) {
+  #cur-dot,
+  #cur-ring {
+    display: none;
+  }
+}

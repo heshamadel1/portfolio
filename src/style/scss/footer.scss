@@ -1,0 +1,53 @@
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.ft-l {
+  font-family: var(--fm);
+  font-size: 0.7rem;
+  color: var(--c-t3);
+  letter-spacing: 0.04em;
+  a {
+    color: var(--c-t2);
+    transition: color 0.2s;
+    &:hover {
+      color: var(--c-ind-l);
+    }
+  }
+}
+.ft-soc {
+  display: flex;
+  gap: 0.55rem;
+}
+.fsoc {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-t3);
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.25s var(--spring),
+    box-shadow 0.2s;
+  &:hover {
+    border-color: var(--border2);
+    color: var(--c-ind-l);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 18px var(--glow-ind);
+  }
+}
