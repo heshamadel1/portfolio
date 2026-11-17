@@ -5,6 +5,14 @@ This project is a personal portfolio website designed to showcase my skills, pro
 
 ---
 
+## 📸 Website Preview
+
+📸 ![Personal Portfolio Preview](./screenshots/portfolio-preview.png)
+
+🚀 [**Visit My Portfolio →**](https://heshamadel1.github.io/portfolio/)
+
+---
+
 ## 🚀 Built With
 
 - ⚡ **Vite**
@@ -56,12 +64,6 @@ npm run build
 
 ---
 
-## 🌐 Live Demo
-
-🚀 [**Visit My Portfolio →**](https://heshamadel1.github.io/portfolio/)
-
----
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -73,5 +75,8 @@ Feel free to explore, use, modify, and learn from this project while keeping the
 ## 👨‍💻 Author
 
 **Hesham Adel** ❤️
+
+- GitHub: [@HeshamAdel1](https://github.com/HeshamAdel1)
+- Portfolio: [Live Website](https://heshamadel1.github.io/portfolio/)
 
 ---
