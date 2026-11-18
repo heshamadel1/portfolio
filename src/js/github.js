@@ -19,7 +19,7 @@
     TypeScript: '#3178C6',
     HTML: '#E34C26',
     CSS: '#563D7C',
-
+    SCSS: '#CC6699',
     // Development
     Python: '#2496ED',
     Framework: '#A78BFA',

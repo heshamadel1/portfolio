@@ -37,6 +37,8 @@
   font-size: 0.95rem;
   letter-spacing: -0.02em;
   color: var(--c-ind-l);
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 .gh-rb {
   padding: 0.15rem 0.55rem;
@@ -45,7 +47,7 @@
   font-size: 0.58rem;
   background: var(--c-s2);
   border: 1px solid var(--border);
-  color: var(--c-t3);
+  color: var(--c-t2);
   flex-shrink: 0;
 }
 .gh-rd {
